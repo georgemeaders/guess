@@ -1,0 +1,33 @@
+<script>
+
+var turns = 0;
+var actualColor = "Red";  
+var inputColor = prompt("Can you guess what color my socks are?");
+//var upperActualColor = actualColor.toUpperCase();
+//var upperInputColor = inputColor.toUpperCase();
+var positiveResponses = ["Wow, got it on the first try!!!", "Not too shabby, second try.", "Just made it under the gun, third time really IS a charm."];
+var negativeResponses = ["Sorry, two more tries","Oops, one more shot!","Ouch, better luck next time, broseph."];
+
+if (inputColor == actualColor) {
+  alert (positiveResponses[0]);
+}
+  else {
+    while (inputColor != actualColor  && turns < 2) {
+       inputColor = prompt(negativeResponses[turns]);
+       turns++; 
+    }
+    if (inputColor == actualColor) {
+      if (turns == 1) {
+        alert (positiveResponses[1]);
+      }
+      else {
+        alert (positiveResponses[2]);
+      }
+    }
+    else {
+      alert (negativeResponses[2]);
+    }
+  } 
+
+</script>
+
